@@ -1,14 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 
 public interface Produce {
+    
     String yield();
     
-    default boolean HasBeenFertilized() {
-        return false;
-    }
+    public boolean hasBeenFertilized = false;
 
-    default boolean HasBeenHarvested() {
-        return false;
-    }
+    
+
+    public boolean hasBeenHarvested = false;
     
 }
