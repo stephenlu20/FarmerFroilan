@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
+
 public class EaterTest {
     static class TestFood implements Edible { }
 
