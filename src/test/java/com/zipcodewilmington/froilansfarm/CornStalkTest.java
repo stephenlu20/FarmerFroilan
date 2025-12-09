@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
-
 import org.junit.jupiter.api.Test;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
@@ -9,51 +8,51 @@ public class CornStalkTest {
     
     @Test
     public void testYieldReturnsEarCorn() {
-        CornStalk CornStalk = new CornStalk();
-        Edible result = CornStalk.yield();
+        CornStalk cornStalk = new CornStalk();
+        Edible result = cornStalk.yield();
         assertTrue(result instanceof EarCorn);
     }
     
     @Test
     public void testYieldReturnsEdible() {
-        CornStalk CornStalk = new CornStalk();
-        Edible result = CornStalk.yield();
+        CornStalk cornStalk = new CornStalk();
+        Edible result = cornStalk.yield();
         assertTrue(result.isEdible());
     }
     
     @Test
     public void testHasBeenFertilizedInitiallyFalse() {
-        CornStalk CornStalk = new CornStalk();
-        assertFalse(CornStalk.hasBeenFertilized());
+        CornStalk cornStalk = new CornStalk();
+        assertFalse(cornStalk.hasBeenFertilized());
     }
     
     @Test
     public void testFertilize() {
-        CornStalk CornStalk = new CornStalk();
-        CornStalk.fertilize();
-        assertTrue(CornStalk.hasBeenFertilized());
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.fertilize();
+        assertTrue(cornStalk.hasBeenFertilized());
     }
     
     @Test
     public void testHasBeenHarvestedInitiallyFalse() {
-        CornStalk CornStalk = new CornStalk();
-        assertFalse(CornStalk.hasBeenHarvested());
+        CornStalk cornStalk = new CornStalk();
+        assertFalse(cornStalk.hasBeenHarvested());
     }
     
     @Test
     public void testHarvest() {
-        CornStalk CornStalk = new CornStalk();
-        CornStalk.harvest();
-        assertTrue(CornStalk.hasBeenHarvested());
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.harvest();
+        assertTrue(cornStalk.hasBeenHarvested());
     }
     
     @Test
     public void testFertilizeAndHarvest() {
-        CornStalk CornStalk = new CornStalk();
-        CornStalk.fertilize();
-        CornStalk.harvest();
-        assertTrue(CornStalk.hasBeenFertilized());
-        assertTrue(CornStalk.hasBeenHarvested());
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.fertilize();
+        cornStalk.harvest();
+        assertTrue(cornStalk.hasBeenFertilized());
+        assertTrue(cornStalk.hasBeenHarvested());
     }
     
     @Test
