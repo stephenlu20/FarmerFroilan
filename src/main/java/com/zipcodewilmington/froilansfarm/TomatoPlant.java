@@ -1,10 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-<<<<<<< HEAD
-=======
-import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
-
->>>>>>> master
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlant implements Produce {

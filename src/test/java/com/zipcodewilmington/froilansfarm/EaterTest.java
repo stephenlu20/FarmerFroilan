@@ -4,19 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-
 public class EaterTest {
     static class TestFood implements Edible { 
-        @Override
-        public boolean isEdible() {
-            return true;
-        }
-    }
-
-public class EaterTest {
-    
-    static class TestFood implements Edible {
         @Override
         public boolean isEdible() {
             return true;

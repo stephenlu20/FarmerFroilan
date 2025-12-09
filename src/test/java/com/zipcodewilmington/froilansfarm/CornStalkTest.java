@@ -1,11 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.Test;
-
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CornStalkTest {
