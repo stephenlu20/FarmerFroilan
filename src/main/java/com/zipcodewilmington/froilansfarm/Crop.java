@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
 public abstract class Crop implements Produce {
     private boolean hasBeenFertilized = false;
     private boolean hasBeenHarvested;
