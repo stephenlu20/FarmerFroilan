@@ -11,7 +11,7 @@ public class Shelter<T extends Animal> {
     private String name;
     private int capacity;
 
-    public shelter() {
+    public Shelter() {
         this.animals = new ArrayList<>();
         this.name = "Unnamed Shelter";
         this.capacity = Integer.MAX_VALUE;
