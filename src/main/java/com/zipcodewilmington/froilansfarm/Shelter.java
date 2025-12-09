@@ -95,6 +95,7 @@ public class Shelter<T extends Animal> {
     public String toString() {
         return name + " [" + animals.size() + "/" + capacity + " animals]";
     }
+    
 }
 
     
