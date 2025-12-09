@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.Interfaces;
+package com.zipcodewilmington.froilansfarm;
 
 public interface Produce {
     String yield();
