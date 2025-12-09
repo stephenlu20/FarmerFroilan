@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.Test;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,7 +12,7 @@ public class CornStalkTest {
     @Test
     public void testYield() {
         CornStalk cornStalk = new CornStalk();
-        String result = cornStalk.yield();
+        Edible result = cornStalk.yield();
         assertEquals("Corn ear", result);
     }
 

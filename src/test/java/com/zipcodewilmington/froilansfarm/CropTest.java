@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
-
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce; 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CropTest {
@@ -22,7 +24,10 @@ public class CropTest {
     }
 
     private static class TestEdible implements Edible {
-
+        @Override
+        public boolean isEdible() {
+            return true;
+    }
     }
 
     private Crop crop;

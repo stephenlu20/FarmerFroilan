@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlant implements Produce {
@@ -10,7 +11,7 @@ public class TomatoPlant implements Produce {
 
     @Override
     public Edible yield() {
-        return Tomato();
+        return new Tomato();
     }
 
     @Override

@@ -2,9 +2,15 @@ package com.zipcodewilmington.froilansfarm;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class EaterTest {
-    static class TestFood implements Edible { }
+    static class TestFood implements Edible { 
+        @Override
+        public boolean isEdible() {
+            return true;
+        }
+    }
 
     static class TestEater implements Eater {
         boolean hasEaten = false;
