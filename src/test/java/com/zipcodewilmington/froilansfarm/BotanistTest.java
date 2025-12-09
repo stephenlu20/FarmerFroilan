@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
 import org.junit.jupiter.api.Test;
+
+import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BotanistTest {
