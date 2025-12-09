@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+
 public class NoiseMakerTest {
 
     private static class TestNoiseMaker implements NoiseMaker {
