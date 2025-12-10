@@ -81,14 +81,14 @@ public class ProduceTest {
     
     @Test
     public void testBothCropsFollowProduceContract() {
-        
-        Produce<EarCorn> corn = new CornStalk();
-        assertFalse(corn.getHasBeenFertilized());
-        assertFalse(corn.getHasBeenHarvested());
-        
-       
-        Produce<Tomato> tomato = new TomatoPlant();
-        assertFalse(tomato.getHasBeenFertilized());
-        assertFalse(tomato.getHasBeenHarvested());
-    }
+        CornStalk corn = new CornStalk();
+        corn.setHasBeenFertilized(true);
+        assertNotNull(corn.yield());  
+        assertTrue(corn instanceof Produce);
+    
+        TomatoPlant tomato = new TomatoPlant();
+        tomato.setHasBeenFertilized(true);
+        assertNotNull(tomato.yield()); 
+        assertTrue(tomato instanceof Produce);
+}
 }
