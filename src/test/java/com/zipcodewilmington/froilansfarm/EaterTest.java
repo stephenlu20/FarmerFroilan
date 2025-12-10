@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 public class EaterTest {
     static class TestFood implements Edible { 
         @Override
-        public boolean isEdible() {
+        public boolean getIsEdible() {
             return true;
         }
     }
