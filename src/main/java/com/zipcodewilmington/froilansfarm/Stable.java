@@ -1,8 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Stable extends Shelter<Horse>{
+
+public class Stable extends Shelter<Horse> {
     
     public Stable() {
-        super();
+        super("Stable");
+    }
+    
+    public Stable(String name) {
+        super(name);
     }
 }

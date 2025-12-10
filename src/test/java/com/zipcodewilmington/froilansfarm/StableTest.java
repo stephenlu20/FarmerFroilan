@@ -14,14 +14,14 @@ public class StableTest {
         String name = stable.getName();
 
         // Then
-        Assertions.assertEquals("Stabe", name);
+        Assertions.assertEquals("Stable", name);
     }
 
     @Test
     public void testAddHorse() {
         // Given
         Stable stable = new Stable();
-        Horse horse = new Horse();
+        Horse horse = new Horse(null);
 
         // When
         boolean added = stable.add(horse);
@@ -36,7 +36,7 @@ public class StableTest {
     public void testRemoveHorse() {
         // Given
         Stable stable = new Stable();
-        Horse horse = new Horse();
+        Horse horse = new Horse(null);
         stable.add(horse);
 
         // When
@@ -52,7 +52,7 @@ public class StableTest {
     public void testGetHorseByIndex() {
         // Given
         Stable stable = new Stable();
-        Horse horse = new Horse();
+        Horse horse = new Horse(null);
         stable.add(horse);
 
         // When
@@ -87,8 +87,8 @@ public class StableTest {
     public void testClearStable() {
         // Given
         Stable stable = new Stable();
-        stable.add(new Horse());
-        stable.add(new Horse());
+        stable.add(new Horse(null));
+        stable.add(new Horse(null));
 
         // When
         stable.clear();
@@ -104,8 +104,8 @@ public class StableTest {
         Stable stable = new Stable();
         stable.setCapacity(1);
 
-        Horse h1 = new Horse();
-        Horse h2 = new Horse();
+        Horse h1 = new Horse(null);
+        Horse h2 = new Horse(null);
 
         // When
         boolean firstAdded = stable.add(h1);
