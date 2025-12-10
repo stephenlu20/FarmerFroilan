@@ -1,4 +1,5 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Interfaces;
+import com.zipcodewilmington.froilansfarm.Crop; 
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,6 @@ public class CropRow {
     }
 
     public Integer size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        return crops.size();
     }
 }

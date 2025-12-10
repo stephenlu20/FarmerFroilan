@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
-public interface FarmVehicle extends Vehicle {
+public interface FarmVehicle {
     void operate(Farm farm);
+    String makeNoise();
 } 
