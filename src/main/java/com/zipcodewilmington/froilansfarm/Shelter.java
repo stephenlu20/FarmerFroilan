@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Shelter<T extends Animal> {
+public class Shelter<T> {
 
     private List<T> animals;
     private String name;

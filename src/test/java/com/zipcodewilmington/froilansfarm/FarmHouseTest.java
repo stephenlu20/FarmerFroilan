@@ -20,7 +20,7 @@ public class FarmHouseTest {
     public void testAddPerson() {
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        Person person = new Person();
+        Person person = new Farmer(null);
 
         // When
         boolean added = farmHouse.add(person);
@@ -35,7 +35,7 @@ public class FarmHouseTest {
     public void testRemovePerson() {
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        Person person = new Person();
+        Person person = new Farmer(null);
         farmHouse.add(person);
 
         // When
@@ -51,7 +51,7 @@ public class FarmHouseTest {
     public void testGetPersonByIndex() {
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        Person p = new Person();
+        Person p = new Farmer(null);
         farmHouse.add(p);
 
         // When
@@ -86,8 +86,8 @@ public class FarmHouseTest {
     public void testClearFarmHouse() {
         // Given
         FarmHouse farmHouse = new FarmHouse();
-        farmHouse.add(new Person());
-        farmHouse.add(new Person());
+        farmHouse.add(new Farmer(null));
+        farmHouse.add(new Farmer(null));
 
         // When
         farmHouse.clear();
@@ -103,8 +103,8 @@ public class FarmHouseTest {
         FarmHouse farmhouse = new FarmHouse();
         farmhouse.setCapacity(1);
 
-        Person p1 = new Person();
-        Person p2 = new Person();
+        Person p1 = new Farmer(null);
+        Person p2 = new Farmer(null);
 
         // When
         boolean firstAdded = farmhouse.add(p1);

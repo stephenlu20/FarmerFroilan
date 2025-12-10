@@ -19,4 +19,9 @@ public class CropRow {
     public List<Crop> getCrops() {
         return crops;
     }
+
+    public Integer size() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'size'");
+    }
 }

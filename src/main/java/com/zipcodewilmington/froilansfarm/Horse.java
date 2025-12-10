@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.Animal;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
