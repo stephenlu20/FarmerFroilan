@@ -1,24 +1,41 @@
 package com.zipcodewilmington.froilansfarm;
-
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TomatoPlantTest {
     
     @Test
-    public void testYieldReturnsTomato() {
+    public void testYieldReturnsNullWhenNotFertilized() {
         TomatoPlant tomatoPlant = new TomatoPlant();
-        Edible result = tomatoPlant.yield();
+        Tomato result = tomatoPlant.yield();
+        assertNull(result);
+    }
+    
+    @Test
+    public void testYieldReturnsNullWhenAlreadyHarvested() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        tomatoPlant.fertilize();
+        tomatoPlant.harvest();
+        Tomato result = tomatoPlant.yield();
+        assertNull(result);
+    }
+    
+    @Test
+    public void testYieldReturnsTomatoWhenFertilizedAndNotHarvested() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        tomatoPlant.fertilize();
+        Tomato result = tomatoPlant.yield();
+        assertNotNull(result);
         assertTrue(result instanceof Tomato);
     }
     
     @Test
     public void testYieldReturnsEdible() {
         TomatoPlant tomatoPlant = new TomatoPlant();
-        Edible result = tomatoPlant.yield();
+        tomatoPlant.fertilize();
+        Tomato result = tomatoPlant.yield();
+        assertNotNull(result);
         assertTrue(result.getIsEdible());
     }
     
@@ -58,14 +75,14 @@ public class TomatoPlantTest {
     }
     
     @Test
+    public void testImplementsProduce() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        assertTrue(tomatoPlant instanceof Produce);
+    }
+    
+    @Test
     public void testExtendsCrop() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         assertTrue(tomatoPlant instanceof Crop);
-    }
-
-    @Test
-    public void testImplementsProduceThroughCrop() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        assertTrue(tomatoPlant instanceof Produce);
     }
 }

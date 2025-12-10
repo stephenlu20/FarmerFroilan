@@ -9,7 +9,7 @@ public class TomatoPlant extends Crop implements Produce<Tomato>{
     }
     
     @Override
-    public Edible yield() {
+    public Tomato yield() {
         if (getHasBeenFertilized() && !getHasBeenHarvested()) {
             return new Tomato();
         }

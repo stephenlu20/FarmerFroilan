@@ -9,7 +9,7 @@ public class CornStalk extends Crop implements Produce<EarCorn>{
     }
     
     @Override
-    public Edible yield() {
+    public EarCorn yield() {
         if (getHasBeenFertilized() && !getHasBeenHarvested()) {
             return new EarCorn();
         }

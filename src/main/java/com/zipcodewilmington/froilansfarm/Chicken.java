@@ -47,7 +47,7 @@ public class Chicken extends Animal implements Produce<Egg> {
     }
 
     @Override
-    public Edible yield() {
+    public Egg yield() {
         if (!hasBeenFertilized && !hasBeenHarvested) {
             hasBeenHarvested = true;
             return new Egg(hasBeenFertilized);

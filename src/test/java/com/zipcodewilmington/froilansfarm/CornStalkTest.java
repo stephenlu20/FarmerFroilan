@@ -1,22 +1,41 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CornStalkTest {
     
     @Test
-    public void testYieldReturnsEarCorn() {
+    public void testYieldReturnsNullWhenNotFertilized() {
         CornStalk cornStalk = new CornStalk();
-        Edible result = cornStalk.yield();
+        EarCorn result = cornStalk.yield();
+        assertNull(result);
+    }
+    
+    @Test
+    public void testYieldReturnsNullWhenAlreadyHarvested() {
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.fertilize();
+        cornStalk.harvest();
+        EarCorn result = cornStalk.yield();
+        assertNull(result);
+    }
+    
+    @Test
+    public void testYieldReturnsEarCornWhenFertilizedAndNotHarvested() {
+        CornStalk cornStalk = new CornStalk();
+        cornStalk.fertilize();
+        EarCorn result = cornStalk.yield();
+        assertNotNull(result);
         assertTrue(result instanceof EarCorn);
     }
     
     @Test
     public void testYieldReturnsEdible() {
         CornStalk cornStalk = new CornStalk();
-        Edible result = cornStalk.yield();
+        cornStalk.fertilize();
+        EarCorn result = cornStalk.yield();
+        assertNotNull(result);
         assertTrue(result.getIsEdible());
     }
     
@@ -59,5 +78,11 @@ public class CornStalkTest {
     public void testImplementsProduce() {
         CornStalk cornStalk = new CornStalk();
         assertTrue(cornStalk instanceof Produce);
+    }
+    
+    @Test
+    public void testExtendsCrop() {
+        CornStalk cornStalk = new CornStalk();
+        assertTrue(cornStalk instanceof Crop);
     }
 }
