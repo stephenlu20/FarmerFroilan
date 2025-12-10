@@ -5,3 +5,4 @@ public interface Produce {
     boolean hasBeenFertilized();
     boolean hasBeenHarvested();
 }
+
