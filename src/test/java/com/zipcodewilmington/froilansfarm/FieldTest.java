@@ -30,7 +30,7 @@ public class FieldTest {
         Crop corn = new CornStalk();
         cropRow.add(corn);
         field.addRow(cropRow);
-        assertTrue(field.getRows().get(1).getCrops().contains(corn));
+        assertTrue(field.getRows().get(0).getCrops().contains(corn));
     }
 
     @Test

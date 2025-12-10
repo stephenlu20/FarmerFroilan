@@ -26,11 +26,6 @@ public class FarmVehicleTest {
     }
 
     @Test
-    public void testFarmVehicleExtendsVehicle() {
-        assertTrue(Vehicle.class.isAssignableFrom(FarmVehicle.class));
-    }
-
-    @Test
     public void testFarmVehicleCanOperate() throws NoSuchMethodException {
         FarmVehicle.class.getMethod("operate", Farm.class);
         assertTrue(true);

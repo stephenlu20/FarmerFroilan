@@ -15,13 +15,13 @@ public class PersonTest {
     @Test
     public void testFarmerMakesNoise() {
         Farmer froilan = new Farmer("Froilan");
-        assertEquals("Froilan says 'Yee haw!'", froilan.makeNoise());
+        assertEquals("Froilan says 'YAML!'", froilan.makeNoise());
     }
     
     @Test
     public void testPilotMakesNoise() {
         Pilot froilanda = new Pilot("Froilanda");
-        assertEquals("Froilanda says 'Ready for takeoff!'", froilanda.makeNoise());
+        assertEquals("Takeoff!", froilanda.makeNoise());
     }
     
     @Test

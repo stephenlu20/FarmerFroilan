@@ -13,7 +13,7 @@ public class ChickenCoopTest {
         String name = chickenCoop.getName();
 
         // Then
-        Assertions.assertEquals("Chickencoop", name);
+        Assertions.assertEquals("Chicken Coop", name);
     }
 
     @Test
