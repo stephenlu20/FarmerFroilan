@@ -1,9 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
-
-import com.zipcodewilmington.froilansfarm.Interfaces.Vehicle;
-import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FarmVehicleTest {
@@ -30,7 +27,7 @@ public class FarmVehicleTest {
 
     @Test
     public void testFarmVehicleExtendsVehicle() {
-        assertTrue(Vehicle.class.isAssignableForm(FarmVehicle.class));
+        assertTrue(Vehicle.class.isAssignableFrom(FarmVehicle.class));
     }
 
     @Test
@@ -44,7 +41,6 @@ public class FarmVehicleTest {
         TestFarmVehicle vehicle = new TestFarmVehicle();
         assertNotNull(vehicle);
         assertTrue(vehicle instanceof FarmVehicle);
-        assertTrue(vehicle instanceof Vehicle);
     }
 
     @Test

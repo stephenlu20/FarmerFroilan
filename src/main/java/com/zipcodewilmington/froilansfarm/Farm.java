@@ -47,6 +47,24 @@ public class Farm {
         ChickenCoop coop2 = new ChickenCoop("Coop 2");
         ChickenCoop coop3 = new ChickenCoop("Coop 3");
         ChickenCoop coop4 = new ChickenCoop("coop 4");
+
+        for (int i = 0; i < 4; i++) {
+            coop1.add(new Chicken("Chicken" + i));
+        }
+        for (int i = 4; i < 8; i++) {
+            coop2.add(new Chicken("Chicken" + i));
+        }
+        for (int i = 8; i < 12; i++) {
+            coop3.add(new Chicken("Chicken" + i));
+        }
+        for (int i = 12; i < 15; i++) {
+            coop4.add(new Chicken("Chicken" + i));
+        }
+
+        chickenCoops.add(coop1);
+        chickenCoops.add(coop2);
+        chickenCoops.add(coop3);
+        chickenCoops.add(coop4);
     }
 
     public FarmHouse getFarmHouse() {

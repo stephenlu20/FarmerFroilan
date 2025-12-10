@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.Interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
@@ -58,7 +59,7 @@ public class TractorTest {
         crop2.setHasBeenFertilized(true);
         cropRow.add(crop1);
         cropRow.add(crop2);
-        tractor.harvest(cropRow);
+        tractor.harvestCropRow(cropRow);
         assertTrue(crop1.getHasBeenHarvested());
         assertTrue(crop2.getHasBeenHarvested());
     }
