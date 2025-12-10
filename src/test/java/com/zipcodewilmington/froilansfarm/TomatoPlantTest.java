@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlantTest {
     
@@ -56,7 +57,13 @@ public class TomatoPlantTest {
     }
     
     @Test
-    public void testImplementsProduce() {
+    public void testExtendsCrop() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        assertTrue(tomatoPlant instanceof Crop);
+    }
+
+    @Test
+    public void testImplementsProduceThroughCrop() {
         TomatoPlant tomatoPlant = new TomatoPlant();
         assertTrue(tomatoPlant instanceof Produce);
     }
