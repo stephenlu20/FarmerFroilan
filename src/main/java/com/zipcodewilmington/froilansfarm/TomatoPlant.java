@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class TomatoPlant extends Crop implements Produce<Tomato>{

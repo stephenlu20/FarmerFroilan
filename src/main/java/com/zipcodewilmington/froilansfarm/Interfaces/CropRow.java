@@ -1,7 +1,9 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Interfaces;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.zipcodewilmington.froilansfarm.Crop;
 
 public class CropRow {
     private List<Crop> crops;
