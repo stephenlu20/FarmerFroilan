@@ -7,82 +7,85 @@ public class TomatoPlantTest {
     
     @Test
     public void testYieldReturnsNullWhenNotFertilized() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        Tomato result = tomatoPlant.yield();
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        Tomato result = TomatoPlant.yield();
         assertNull(result);
     }
     
     @Test
     public void testYieldReturnsNullWhenAlreadyHarvested() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.fertilize();
-        tomatoPlant.harvest();
-        Tomato result = tomatoPlant.yield();
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenFertilized(true);  
+        TomatoPlant.setHasBeenHarvested(true);   
+        Tomato result = TomatoPlant.yield();
         assertNull(result);
-    }
+}
+
     
     @Test
-    public void testYieldReturnsTomatoWhenFertilizedAndNotHarvested() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.fertilize();
-        Tomato result = tomatoPlant.yield();
+    public void testYieldReturnsEarCornWhenFertilizedAndNotHarvested() {
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenFertilized(true);
+        Tomato result = TomatoPlant.yield();  
         assertNotNull(result);
         assertTrue(result instanceof Tomato);
     }
+
     
     @Test
     public void testYieldReturnsEdible() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.fertilize();
-        Tomato result = tomatoPlant.yield();
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenFertilized(true);  
+        Tomato result = TomatoPlant.yield();
         assertNotNull(result);
         assertTrue(result.getIsEdible());
     }
+
     
     @Test
     public void testHasBeenFertilizedInitiallyFalse() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        assertFalse(tomatoPlant.getHasBeenFertilized());
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        assertFalse(TomatoPlant.getHasBeenFertilized());
     }
     
     @Test
     public void testFertilize() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.fertilize();
-        assertTrue(tomatoPlant.getHasBeenFertilized());
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenFertilized(true);  
+        assertTrue(TomatoPlant.getHasBeenFertilized());
     }
     
     @Test
     public void testHasBeenHarvestedInitiallyFalse() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        assertFalse(tomatoPlant.getHasBeenHarvested());
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        assertFalse(TomatoPlant.getHasBeenHarvested());
     }
     
     @Test
     public void testHarvest() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.harvest();
-        assertTrue(tomatoPlant.getHasBeenHarvested());
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenHarvested(true);  
+        assertTrue(TomatoPlant.getHasBeenHarvested());
     }
     
     @Test
     public void testFertilizeAndHarvest() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        tomatoPlant.fertilize();
-        tomatoPlant.harvest();
-        assertTrue(tomatoPlant.getHasBeenFertilized());
-        assertTrue(tomatoPlant.getHasBeenHarvested());
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        TomatoPlant.setHasBeenFertilized(true);  
+        TomatoPlant.setHasBeenHarvested(true);  
+        assertTrue(TomatoPlant.getHasBeenFertilized());
+        assertTrue(TomatoPlant.getHasBeenHarvested());
     }
     
     @Test
     public void testImplementsProduce() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        assertTrue(tomatoPlant instanceof Produce);
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        assertTrue(TomatoPlant instanceof Produce);
     }
     
     @Test
     public void testExtendsCrop() {
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        assertTrue(tomatoPlant instanceof Crop);
+        TomatoPlant TomatoPlant = new TomatoPlant();
+        assertTrue(TomatoPlant instanceof Crop);
     }
 }
