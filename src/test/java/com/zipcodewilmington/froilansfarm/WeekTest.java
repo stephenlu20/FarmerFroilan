@@ -88,15 +88,15 @@ public class WeekTest {
 
     private void wednesday() {
         morningRoutine();
+        CropRow row3 = farm.getField().getRows().get(3);
         CropRow row4 = farm.getField().getRows().get(4);
-        CropRow row5 = farm.getField().getRows().get(5);
         
         for (int i = 0; i < 10; i++) {
-            froilan.plant(new CornStalk(), row4);
+            froilan.plant(new CornStalk(), row3);
         }
 
         for (int i = 0; i < 10; i++) {
-            froilan.plant(new TomatoPlant(), row5);
+            froilan.plant(new TomatoPlant(), row4);
         }
     }  
         
