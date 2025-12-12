@@ -5,6 +5,7 @@ public class WeekTest {
     private Farm farm = new Farm();
     private Farmer froilan = (Farmer) farm.getFarmHouse().get(0);
     private Pilot froilanda = (Pilot) farm.getFarmHouse().get(1);
+    private CropDuster cropDuster = new CropDuster();
 
     @Test
     public void simulateWeek() {
@@ -51,9 +52,29 @@ public class WeekTest {
 
     private void thursday() {
         morningRoutine();
+
+        
+
+        froilanda.mount(cropDuster);
+        froilanda.fly(cropDuster);
+
+        cropDuster.fertilize(farm.getField().getRows().get(3));
+        cropDuster.fertilize(farm.getField().getRows().get(4));
+
+
+        froilanda.dismount(cropDuster);
+
+       
+
+
+
+
         // Fill out what froilan and froilanda do
 
     }
+
+    
+    
 
     private void friday() {
         morningRoutine();
