@@ -104,9 +104,29 @@ public class WeekTest {
 
     private void thursday() {
         morningRoutine();
+
+        
+
+        froilanda.mount(cropDuster);
+        froilanda.fly(cropDuster);
+
+        cropDuster.fertilize(farm.getField().getRows().get(3));
+        cropDuster.fertilize(farm.getField().getRows().get(4));
+
+
+        froilanda.dismount(cropDuster);
+
+       
+
+
+
+
         // Fill out what froilan and froilanda do
 
     }
+
+    
+    
 
     private void friday() {
         morningRoutine();
