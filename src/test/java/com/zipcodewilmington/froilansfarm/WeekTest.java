@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 import org.junit.jupiter.api.Test;
+import com.zipcodewilmington.froilansfarm.Interfaces.CropRow;
 
 public class WeekTest {
     private Farm farm = new Farm();
@@ -28,7 +29,21 @@ public class WeekTest {
 
     private void sunday() {
         morningRoutine();
-        // Fill out what froilan and froilanda do on sunday
+        CropRow row1 = farm.getField().getRows().get(0);
+        CropRow row2 = farm.getField().getRows().get(1);
+        CropRow row3 = farm.getField().getRows().get(2);
+        
+        for (int i = 0; i < 10; i++) {
+            froilan.plant(new CornStalk(), row1);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            froilan.plant(new TomatoPlant(), row2);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            froilan.plant(new CarrotPlant(), row3);
+        }
     }
 
     private void monday() {
